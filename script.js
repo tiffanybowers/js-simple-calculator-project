@@ -16,6 +16,7 @@ function handleNumpadInput(key) {
     if (key === '*') { key = '*'; }
     if (key === '/') { key = '/'; }
     if (key === 'Enter') { key = 'equal'; } // Treat Enter key as equal button
+    if (key === 'Backspace') { key = 'backspace'; }
     const button = document.getElementById(key);
     if (button) {
         button.click(); // Simulate click on corresponding button
@@ -26,34 +27,30 @@ function handleNumpadInput(key) {
 document.addEventListener('keydown', function(event) {
     const key = event.key;
 
-    if (key === '+' || key === '-' || key === '*' || key === '/' || key === 'Enter') {
+    if (key === '1' || key === '2' || key === '3' || key === '4' || key === '5' || key === '6' || key === '7' || key === '8' || key === '9' || key === '0' || 
+    key === '-' || key === '+' || key === '*' || key === '/' || key === 'Enter' || key === 'Backspace') {
         handleNumpadInput(key);
     }
 });
 
 btns.forEach((item) => {
     item.addEventListener('click', () => {
+
         if(item.id == 'clear') {
-
             display.innerText = ''; //resets input field
-
-        } else if (item.id === 'backspace') {
+        } 
+        else if (item.id === 'backspace' || item.id === 'Backspace') {
 
             let string = display.innerText.toString();
             display.innerText = string.substr(0, string.length - 1); //removes last text item from input field
-
-        } else if (display.innerText !== '' && (item.id === 'equal' || item.id === 'Enter')) {
-            //calculates the equation
+        } 
+        else if (display.innerText !== '' && (item.id === 'equal' || item.id === 'Enter')) {
             display.innerText = eval(display.innerText);
-
-        } else if (display.innerText === '' && (item.id == 'equal' || item.id === 'Enter')) {
-
-            display.innerText = 'Empty!';
-            setTimeout(() => (display.innerText = ''), 2000);
-
-        } else {
+        } 
+        else {
             display.innerText += item.id;
         }
+        
     });
 });
 
