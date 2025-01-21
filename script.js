@@ -20,6 +20,7 @@ function handleNumpadInput(key) {
     const button = document.getElementById(key);
     if (button) {
         button.click(); // Simulate click on corresponding button
+        console.log(button);
     }
 }
 
