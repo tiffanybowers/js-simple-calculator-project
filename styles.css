@@ -81,7 +81,7 @@ a {
   border: 0;
   border-radius: 30px;
   margin: 5px;
-  font-size: 27px;
+  font-size: 20px;
   cursor: pointer;
   transition: all 200ms ease;
 }
@@ -90,6 +90,9 @@ a {
 }
 #main-container .calculator #equal {
   height: 120px;
+}
+#main-container .calculator #backspace {
+  font-size: 23px;
 }
 #main-container .calculator {
   background-color: #fff;
@@ -139,4 +142,6 @@ a {
 }
 #main-container .calculator.dark#display {
   color: #f8fafd;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
