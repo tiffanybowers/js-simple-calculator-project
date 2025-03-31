@@ -91,9 +91,6 @@ a {
 #main-container .calculator #equal {
   height: 120px;
 }
-#main-container .calculator #backspace {
-  font-size: 23px;
-}
 #main-container .calculator {
   background-color: #fff;
 }
